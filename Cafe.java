@@ -70,6 +70,17 @@ public class Cafe extends Building {
         super.showOptions();
         System.out.println(" + sellCoffee(size, sugar, creams)");
     }
+
+    /*overrides goToFloor of Building; cannot access other floors as it's only for employees */
+  @Override
+  public void goToFloor(int floorNum){
+    if (floorNum != 1){
+        System.out.println("All other floors are inaccessible");
+    }
+    else{
+        System.out.println("Welcome to the 1st floor!");
+    }
+  }
     
     public static void main(String[] args) {
         /*Main method (for testing) */
